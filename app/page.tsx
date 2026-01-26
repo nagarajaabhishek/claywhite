@@ -2,8 +2,10 @@ import { Metadata } from "next";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import ServicesOverview from "@/components/ServicesOverview";
+import CompanyServices from "@/components/CompanyServices";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import SectorList from "@/components/SectorList";
+import Clients from "@/components/Clients";
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
@@ -28,8 +30,10 @@ export default function Home() {
       <Hero />
       <Stats />
       <ServicesOverview />
+      <CompanyServices />
       <SectorList />
       <TestimonialGrid />
+      <Clients />
       <CTA 
         primaryText="Schedule a Strategy Audit"
         secondaryText="Explore GRC Frameworks"

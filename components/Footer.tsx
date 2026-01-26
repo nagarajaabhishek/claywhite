@@ -3,12 +3,12 @@ import { siteContent } from "@/content/site";
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal text-white section-padding">
+    <footer className="bg-white text-charcoal section-padding border-t border-gray-100">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-gold font-bold text-lg mb-4">WH Advisory Services</h3>
-            <p className="text-gray-300 text-sm mb-4">
+            <h3 className="text-gray-dark font-bold text-lg mb-4">WH Advisory Services</h3>
+            <p className="text-gray-600 text-sm mb-4">
               Transforming compliance from a check-the-box burden into a strategic asset.
             </p>
             <div className="flex gap-4">
@@ -16,7 +16,7 @@ export default function Footer() {
                 href={siteContent.company.linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-gold transition-colors"
+                className="text-gray-500 hover:text-gold transition-colors"
                 aria-label="WH Advisory Services LinkedIn"
                 title="WH Advisory Services on LinkedIn"
               >
@@ -28,7 +28,7 @@ export default function Footer() {
                 href={siteContent.principal.linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-gold transition-colors"
+                className="text-gray-500 hover:text-gold transition-colors"
                 aria-label="Clay White LinkedIn"
                 title="Clay White on LinkedIn"
               >
@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="font-bold mb-4">Services</h4>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <ul className="space-y-2 text-sm text-gray-600">
               <li>
                 <Link href="/services/fractional-leadership" className="hover:text-gold transition-colors">
                   Fractional Leadership
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="font-bold mb-4">Company</h4>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <ul className="space-y-2 text-sm text-gray-600">
               <li>
                 <Link href="/about" className="hover:text-gold transition-colors">
                   About
@@ -70,30 +70,30 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="font-bold mb-4">Locations</h4>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <ul className="space-y-2 text-sm text-gray-600">
               {siteContent.principal.locations.map((location, idx) => (
                 <li key={idx}>{location}</li>
               ))}
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-600 pt-8 text-center text-sm text-gray-400">
+        <div className="border-t border-gray-200 pt-8 text-center text-sm text-gray-500">
           <p suppressHydrationWarning>&copy; {new Date().getFullYear()} WH Advisory Services. All rights reserved.</p>
           <div className="mt-2 flex justify-center gap-4">
             <a
               href={siteContent.company.linkedIn}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-gold transition-colors"
+              className="text-gray-500 hover:text-gold transition-colors"
             >
               Company LinkedIn
             </a>
-            <span className="text-gray-600">•</span>
+            <span className="text-gray-300">•</span>
             <a
               href={siteContent.principal.linkedIn}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-gold transition-colors"
+              className="text-gray-500 hover:text-gold transition-colors"
             >
               Clay White LinkedIn
             </a>

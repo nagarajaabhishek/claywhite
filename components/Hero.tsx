@@ -10,28 +10,28 @@ export default function Hero() {
     trackCTAClick(text, href);
   };
   return (
-    <section className="bg-gray-dark text-white section-padding">
+    <section className="bg-white text-charcoal section-padding">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               {siteContent.hero.headline}
             </h1>
-            <p className="text-xl mb-8 text-gray-200">
+            <p className="text-xl mb-8 text-gray-600">
               {siteContent.hero.subheadline}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
                 onClick={() => handleCTAClick(siteContent.hero.primaryCTA, "/contact")}
-                className="bg-gold text-gray-dark px-8 py-3 rounded-lg font-bold hover:bg-gold-light transition-colors text-center"
+                className="bg-charcoal text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-dark transition-colors text-center"
               >
                 {siteContent.hero.primaryCTA}
               </Link>
               <Link
                 href="/services/grc-regulatory"
                 onClick={() => handleCTAClick(siteContent.hero.secondaryCTA, "/services/grc-regulatory")}
-                className="border-2 border-gold text-gold px-8 py-3 rounded-lg font-bold hover:bg-gold hover:text-gray-dark transition-colors text-center"
+                className="border-2 border-charcoal text-charcoal px-8 py-3 rounded-lg font-bold hover:bg-charcoal hover:text-white transition-colors text-center"
               >
                 {siteContent.hero.secondaryCTA}
               </Link>
@@ -60,13 +60,13 @@ export default function Hero() {
                 }
               }}
             />
-            <div className="image-placeholder absolute inset-0 bg-gradient-to-br from-gold/20 to-gray-dark/80 flex items-center justify-center hidden">
-              <div className="text-center text-white">
-                <div className="w-48 h-48 mx-auto bg-charcoal rounded-full flex items-center justify-center mb-4">
+            <div className="image-placeholder absolute inset-0 bg-gradient-to-br from-gold/10 to-gray-200 flex items-center justify-center hidden">
+              <div className="text-center text-charcoal">
+                <div className="w-48 h-48 mx-auto bg-white border border-gray-200 rounded-full flex items-center justify-center mb-4">
                   <span className="text-6xl font-bold text-gold">CW</span>
                 </div>
-                <p className="text-sm text-gray-300">Clay White</p>
-                <p className="text-xs text-gray-400 mt-2">Please add clay-white.jpg to /public/images/</p>
+                <p className="text-sm text-gray-600">Clay White</p>
+                <p className="text-xs text-gray-500 mt-2">Please add clay-white.jpg to /public/images/</p>
               </div>
             </div>
           </div>

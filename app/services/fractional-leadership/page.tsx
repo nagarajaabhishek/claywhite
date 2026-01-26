@@ -48,12 +48,12 @@ export default function FractionalLeadershipPage() {
         }}
       />
       <div>
-      <section className="section-padding bg-gray-dark text-white">
+      <section className="section-padding bg-white text-charcoal">
         <div className="container-custom">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             {siteContent.services.fractional.title}
           </h1>
-          <p className="text-xl text-gray-200 max-w-3xl">
+          <p className="text-xl text-gray-600 max-w-3xl">
             {siteContent.services.fractional.description}
           </p>
         </div>
@@ -84,17 +84,26 @@ export default function FractionalLeadershipPage() {
               ))}
             </ul>
 
-            <div className="bg-gray-50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-dark mb-4">Why Fractional Leadership?</h3>
-              <p className="text-charcoal mb-4">
-                Many growing companies need executive-level oversight but aren&apos;t ready for the full-time commitment and overhead of a C-suite hire. Our fractional model provides:
-              </p>
-              <ul className="space-y-2 text-charcoal">
-                <li>• Immediate access to 20+ years of C-suite experience</li>
-                <li>• Strategic guidance without long-term contracts</li>
-                <li>• Scalable support that grows with your needs</li>
-                <li>• Practical solutions informed by both corporate and entrepreneurial experience</li>
+            <div className="bg-gray-50 rounded-lg p-8 mb-12">
+              <h3 className="text-2xl font-bold text-gray-dark mb-4">Customized Solutions</h3>
+              <ul className="space-y-3 text-charcoal">
+                {siteContent.services.fractional.solutions?.map((solution, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <span className="text-gold mr-3">•</span>
+                    <span>{solution}</span>
+                  </li>
+                ))}
               </ul>
+            </div>
+
+            <h2 className="text-3xl font-bold text-gray-dark mb-6">Engagement Models</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              {siteContent.services.fractional.engagementModels?.map((model, idx) => (
+                <div key={idx} className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-gold transition-colors">
+                  <h3 className="text-xl font-bold text-gray-dark mb-3">{model.name}</h3>
+                  <p className="text-charcoal">{model.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

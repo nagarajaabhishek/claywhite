@@ -17,17 +17,17 @@ export default function CTA({ primaryText, secondaryText, primaryHref, secondary
   };
 
   return (
-    <section className={`section-padding bg-gray-dark text-white ${className}`}>
+    <section className={`section-padding bg-gray-50 text-charcoal ${className}`}>
       <div className="container-custom text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
-        <p className="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
+        <p className="text-xl mb-8 text-gray-600 max-w-2xl mx-auto">
           Schedule a strategy audit to see how WH Advisory can transform your compliance into a competitive advantage.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href={primaryHref}
             onClick={() => handleCTAClick(primaryText, primaryHref)}
-            className="bg-gold text-gray-dark px-8 py-3 rounded-lg font-bold hover:bg-gold-light transition-colors"
+            className="bg-charcoal text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-dark transition-colors"
           >
             {primaryText}
           </Link>
@@ -35,7 +35,7 @@ export default function CTA({ primaryText, secondaryText, primaryHref, secondary
             <Link
               href={secondaryHref}
               onClick={() => handleCTAClick(secondaryText, secondaryHref)}
-              className="border-2 border-gold text-gold px-8 py-3 rounded-lg font-bold hover:bg-gold hover:text-gray-dark transition-colors"
+              className="border-2 border-charcoal text-charcoal px-8 py-3 rounded-lg font-bold hover:bg-charcoal hover:text-white transition-colors"
             >
               {secondaryText}
             </Link>

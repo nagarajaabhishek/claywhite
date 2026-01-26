@@ -53,12 +53,12 @@ export default function GRCRegulatoryPage() {
         }}
       />
       <div>
-      <section className="section-padding bg-gray-dark text-white">
+      <section className="section-padding bg-white text-charcoal">
         <div className="container-custom">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             {siteContent.services.grc.title}
           </h1>
-          <p className="text-xl text-gray-200 max-w-3xl">
+          <p className="text-xl text-gray-600 max-w-3xl">
             {siteContent.services.grc.description}
           </p>
         </div>
@@ -69,6 +69,20 @@ export default function GRCRegulatoryPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-dark mb-8">Frameworks & Standards</h2>
             <FrameworkList />
+
+            {siteContent.services.grc.coreServices && (
+              <div className="mt-12">
+                <h2 className="text-3xl font-bold text-gray-dark mb-8">Core Services</h2>
+                <div className="space-y-6">
+                  {siteContent.services.grc.coreServices.map((service, idx) => (
+                    <div key={idx} className="bg-gray-50 rounded-lg p-6 border-l-4 border-gold">
+                      <h3 className="text-xl font-bold text-gray-dark mb-2">{service.name}</h3>
+                      <p className="text-charcoal">{service.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             <div className="mt-12 bg-gray-50 rounded-lg p-8">
               <h3 className="text-2xl font-bold text-gray-dark mb-4">Sector-Specific Expertise</h3>

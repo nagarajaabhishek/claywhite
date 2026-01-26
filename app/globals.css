@@ -4,7 +4,7 @@
 
 :root {
   --gray-dark: #1F2937;
-  --charcoal: #2C3E50;
+  --charcoal: #333740;
   --gold: #D4AF37;
 }
 
@@ -19,6 +19,14 @@
   
   p {
     @apply font-serif;
+  }
+  
+  a {
+    @apply text-inherit no-underline;
+  }
+  
+  a:not([class]) {
+    @apply text-charcoal hover:text-gold;
   }
 }
 

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="bg-gray-dark text-white">
+    <header className="bg-white text-charcoal border-b border-gray-100">
       <div className="container-custom">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center gap-3">
@@ -23,7 +23,7 @@ export default function Header() {
                 }}
               />
             </div>
-            <span className="text-xl font-bold text-gold">
+            <span className="text-xl font-bold text-charcoal">
               WH Advisory Services
             </span>
           </Link>
@@ -44,7 +44,7 @@ export default function Header() {
               Contact
             </Link>
           </nav>
-          <div className="hidden lg:flex items-center space-x-2 text-sm text-gray-300">
+          <div className="hidden lg:flex items-center space-x-2 text-sm text-gray-500">
             <span>Dallas, TX</span>
             <span>•</span>
             <span>Orange County, CA</span>

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { siteContent } from "@/content/site";
 import Timeline from "@/components/Timeline";
 import LogoCloud from "@/components/LogoCloud";
+import Clients from "@/components/Clients";
 import CTA from "@/components/CTA";
 import StructuredData from "@/components/StructuredData";
 
@@ -29,14 +30,14 @@ export default function AboutPage() {
     <>
       <StructuredData type="Person" />
       <div>
-      <section className="section-padding bg-gray-dark text-white">
+      <section className="section-padding bg-white text-charcoal">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Clay White</h1>
-            <p className="text-xl text-gray-200 mb-4">
+            <p className="text-xl text-gray-700 mb-4">
               {siteContent.principal.name}
             </p>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-gray-600">
               {siteContent.principal.title}
             </p>
           </div>
@@ -61,6 +62,40 @@ export default function AboutPage() {
                 {siteContent.about.valueProposition}
               </p>
             </div>
+
+            {siteContent.about.problemsWeSolve && (
+              <div className="bg-white border-2 border-gray-200 rounded-lg p-8 mb-12">
+                <h2 className="text-2xl font-bold text-gray-dark mb-4">The Problems We Solve</h2>
+                <ul className="space-y-3 text-charcoal">
+                  {siteContent.about.problemsWeSolve.map((problem, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <span className="text-gold mr-3">•</span>
+                      <span>{problem}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {siteContent.about.roi && (
+              <div className="bg-gray-50 rounded-lg p-8 mb-12">
+                <h2 className="text-2xl font-bold text-gray-dark mb-4">Value & ROI</h2>
+                <div className="space-y-4 text-charcoal">
+                  <div>
+                    <p className="font-semibold mb-2">Cost Savings:</p>
+                    <p>{siteContent.about.roi.costSavings}</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-2">Benchmark:</p>
+                    <p>{siteContent.about.roi.benchmark}</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-2">Time to Impact:</p>
+                    <p>{siteContent.about.roi.timeToImpact}</p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -68,6 +103,8 @@ export default function AboutPage() {
       <Timeline />
 
       <LogoCloud />
+
+      <Clients />
 
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
