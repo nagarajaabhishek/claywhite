@@ -4,26 +4,57 @@ export default function CompanyServices() {
   return (
     <section className="section-padding bg-gray-50">
       <div className="container-custom">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-dark mb-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-dark mb-4 text-center uppercase">
           Company Services
         </h2>
-        <p className="text-xl text-charcoal text-center mb-12 max-w-3xl mx-auto">
-          Comprehensive GRC and executive leadership services tailored to your needs
+        <p className="text-xl text-charcoal text-center mb-12 max-w-4xl mx-auto">
+          {siteContent.services.companyServicesIntro}
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {siteContent.services.grc.coreServices?.map((service, idx) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+          {siteContent.services.coreServices?.map((service, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-lg p-6 border-2 border-gray-200 hover:border-gold transition-colors shadow-sm"
+              className="bg-white rounded-lg p-8 border-2 border-gray-200 hover:border-gold transition-all shadow-sm flex flex-col"
             >
-              <h3 className="text-xl font-bold text-gray-dark mb-3">
+              <h3 className="text-xl font-bold text-gold mb-2">
                 {service.name}
               </h3>
-              <p className="text-charcoal leading-relaxed">
+              <p className="text-lg font-bold text-gray-dark mb-4 min-h-[3rem]">
+                {service.subtitle}
+              </p>
+              <p className="text-charcoal leading-relaxed mb-6">
                 {service.description}
               </p>
+              <div className="mt-auto">
+                <p className="font-bold text-sm text-gray-dark uppercase tracking-wider mb-3">Key Capabilities</p>
+                <ul className="text-sm text-charcoal space-y-2 mb-6">
+                  {service.capabilities.map((cap, i) => (
+                    <li key={i} className="flex items-start">
+                      <span className="text-gold mr-2">•</span>
+                      {cap}
+                    </li>
+                  ))}
+                </ul>
+                <p className="font-bold text-sm text-gray-dark uppercase tracking-wider mb-3">Business Impact</p>
+                <ul className="text-sm text-charcoal space-y-2">
+                  {service.impact.map((imp, i) => (
+                    <li key={i} className="flex items-start">
+                      <span className="text-gold mr-2">•</span>
+                      {imp}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
+        </div>
+
+        <div className="max-w-4xl mx-auto bg-charcoal text-white rounded-xl p-10 shadow-2xl">
+          <h3 className="text-2xl font-bold mb-4">{siteContent.services.integratedLeadership.title}</h3>
+          <div className="w-20 h-1 bg-gold mb-6"></div>
+          <p className="text-lg leading-relaxed text-gray-200 whitespace-pre-wrap">
+            {siteContent.services.integratedLeadership.description}
+          </p>
         </div>
       </div>
     </section>

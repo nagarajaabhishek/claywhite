@@ -9,7 +9,7 @@ export default function ServicesOverview() {
           Our Services
         </h2>
         <p className="text-xl text-charcoal text-center mb-12 max-w-3xl mx-auto">
-          Executive-level GRC expertise delivered through flexible engagement models
+          {siteContent.services.overviewDescription}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-gold transition-colors">
@@ -18,7 +18,7 @@ export default function ServicesOverview() {
             </h3>
             <p className="text-charcoal mb-6">{siteContent.services.fractional.description}</p>
             <ul className="space-y-3 mb-6">
-              {siteContent.services.fractional.benefits.map((benefit, idx) => (
+              {siteContent.services.fractional.whyChoose.map((benefit: string, idx: number) => (
                 <li key={idx} className="flex items-start">
                   <span className="text-gold mr-2">✓</span>
                   <span className="text-charcoal">{benefit}</span>
@@ -38,18 +38,18 @@ export default function ServicesOverview() {
             </h3>
             <p className="text-charcoal mb-6">{siteContent.services.grc.description}</p>
             <ul className="space-y-2 mb-6 text-sm">
-              {siteContent.services.grc.frameworks.slice(0, 3).map((framework, idx) => (
+              {siteContent.services.grc.coreCapabilities.slice(0, 3).map((capability: string, idx: number) => (
                 <li key={idx} className="flex items-start">
                   <span className="text-gold mr-2">•</span>
-                  <span className="text-charcoal">{framework.name}</span>
+                  <span className="text-charcoal">{capability}</span>
                 </li>
               ))}
             </ul>
             <Link
-              href="/services/grc-regulatory"
+              href="/services/fractional-leadership"
               className="text-gold font-bold hover:underline inline-block"
             >
-              Learn More →
+              Interested in Fractional Work? →
             </Link>
           </div>
         </div>

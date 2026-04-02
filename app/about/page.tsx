@@ -3,27 +3,37 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteContent } from "@/content/site";
 
-import LogoCloud from "@/components/LogoCloud";
 
 import CTA from "@/components/CTA";
 import ChallengeInput from "@/components/ChallengeInput";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "About Clay White | 20+ Years C-Suite GRC Experience",
-  description: "Clay White brings 20+ years of C-suite experience in Governance, Risk, and Compliance. Executive leadership at Maximus, Title365, Aseptic Technology, and founder of Casablanca Cocktails. Based in Dallas, TX and Orange County, CA.",
+  title: "About Clay White | CRMA, CRISC, CISA, CIA | Fractional C-Suite Executive",
+  description: "Clay White brings 20+ years of C-suite experience in GRC, operational leadership, and business execution. CRMA, CRISC, CISA, CIA certified. Executive leadership at Maximus, Title365, Aseptic Technology. Founder of Casablanca Cocktails. Serving Dallas, TX and Orange County, CA.",
   keywords: [
-    "clay white",
-    "grc executive",
+    "Clay White",
+    "CRMA",
+    "CRISC",
+    "CISA",
+    "CIA certification",
+    "GRC executive",
     "compliance executive",
-    "c-suite experience",
+    "fractional COO",
+    "fractional CFO",
+    "fractional GRC executive",
+    "C-suite experience",
     "fractional executive",
-    "dallas compliance consultant",
-    "orange county grc",
+    "Maximus executive",
+    "WH Advisory Services",
+    "compliance consultant Dallas TX",
+    "compliance consultant Orange County CA",
+    "beverage manufacturing compliance",
+    "CEO fractional leadership",
   ],
   openGraph: {
-    title: "About Clay White | WH Advisory Services",
-    description: "20+ years of C-suite experience in GRC. Executive leadership at Maximus, Title365, Aseptic Technology, and founder of Casablanca Cocktails.",
+    title: "About Clay White | CRMA, CRISC, CISA — WH Advisory Services",
+    description: "20+ years of C-suite GRC experience. Fractional COO, CFO, and GRC executive. Executive leadership at Maximus, Title365, and Aseptic Technology.",
     type: "profile",
   },
 };
@@ -32,203 +42,136 @@ export default function AboutPage() {
   return (
     <>
       <StructuredData type="Person" />
-      <div>
-        <section className="section-padding bg-white text-charcoal">
+      <div className="bg-white">
+        {/* Clay White Bio Section */}
+        <section className="section-padding bg-white text-charcoal border-b border-gray-100">
           <div className="container-custom">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
-              <div>
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">Clay White</h1>
-                <p className="text-lg text-gray-600">
-                  {siteContent.principal.title}
-                </p>
-              </div>
-              <div className="relative h-[350px] w-full max-w-xs mx-auto rounded-lg overflow-hidden shadow-xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
+              <div className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl order-2 lg:order-1">
                 <Image
                   src="/images/clay-white.jpg"
                   alt="Clay White - Founder & Principal, WH Advisory Services"
                   fill
-                  className="object-cover rounded-lg"
+                  className="object-cover object-top"
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="section-padding">
-          <div className="container-custom">
-            <div className="max-w-4xl mx-auto">
-              <div className="prose prose-lg max-w-none mb-12">
-                <p className="text-xl text-charcoal mb-6 leading-relaxed">
-                  {siteContent.about.narrative}
+              <div className="order-1 lg:order-2">
+                <h1 className="text-4xl md:text-5xl font-bold mb-2 text-gray-dark">Clay White</h1>
+                <p className="text-xl text-gold font-semibold mb-8 uppercase tracking-widest">
+                  {siteContent.principal.title}
                 </p>
-                <p className="text-lg text-charcoal mb-6">
-                  {siteContent.principal.bio}
-                </p>
-              </div>
-
-              <div className="bg-gray-50 rounded-lg p-8 mb-12">
-                <h2 className="text-2xl font-bold text-gray-dark mb-4">Value Proposition</h2>
-                <p className="text-charcoal leading-relaxed">
-                  {siteContent.about.valueProposition}
-                </p>
-              </div>
-
-              {siteContent.about.problemsWeSolve && (
-                <div className="bg-white border-2 border-gray-200 rounded-lg p-8 mb-12">
-                  <h2 className="text-2xl font-bold text-gray-dark mb-4">The Problems We Solve</h2>
-                  <ul className="space-y-3 text-charcoal">
-                    {siteContent.about.problemsWeSolve.map((problem, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <span className="text-gold mr-3">•</span>
-                        <span>{problem}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {siteContent.about.roi && (
-                <div className="bg-gray-50 rounded-lg p-8 mb-12">
-                  <h2 className="text-2xl font-bold text-gray-dark mb-4">Value & ROI</h2>
-                  <div className="space-y-4 text-charcoal">
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <span className="text-gold mr-3">•</span>
-                        <span dangerouslySetInnerHTML={{ __html: siteContent.about.roi.math.replace('Total cost math:', '<strong>Total cost math:</strong>') }} />
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-gold mr-3">•</span>
-                        <div>
-                          <span className="font-bold">{siteContent.about.roi.benchmarks.title}</span>
-                          <ul className="pl-5 mt-2 space-y-2 list-disc text-gray-600">
-                            {siteContent.about.roi.benchmarks.items.map((item: string, idx: number) => (
-                              <li key={idx}>{item}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-gold mr-3">•</span>
-                        <span dangerouslySetInnerHTML={{ __html: siteContent.about.roi.timeToImpact.replace('Time-to-impact:', '<strong>Time-to-impact:</strong>') }} />
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        </section>
-
-        <section className="section-padding bg-gray-50">
-          <div className="container-custom">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-dark mb-6">
-                {siteContent.services.fractional.title}
-              </h2>
-              <p className="text-xl text-gray-600 mb-12">
-                {siteContent.services.fractional.description}
-              </p>
-
-              <h2 className="text-3xl font-bold text-gray-dark mb-8">The Model</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                {siteContent.services.fractional.models.map((model, idx) => (
-                  <div key={idx} className="bg-white rounded-lg p-8 border-l-4 border-gold shadow-sm">
-                    <h3 className="text-2xl font-bold text-gray-dark mb-4">{model.role}</h3>
-                    <p className="text-charcoal">{model.description}</p>
-                  </div>
-                ))}
-              </div>
-
-              <h2 className="text-3xl font-bold text-gray-dark mb-6">Benefits</h2>
-              <ul className="space-y-4 mb-12">
-                {siteContent.services.fractional.benefits.map((benefit, idx) => (
-                  <li key={idx} className="flex items-start">
-                    <span className="text-gold mr-3 text-2xl">✓</span>
-                    <div>
-                      <p className="text-lg text-charcoal font-semibold">{benefit}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="bg-white rounded-lg p-8 mb-12 shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-dark mb-4">Customized Solutions</h3>
-                <ul className="space-y-3 text-charcoal">
-                  {siteContent.services.fractional.solutions?.map((solution, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <span className="text-gold mr-3">•</span>
-                      <span>{solution}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <h2 className="text-3xl font-bold text-gray-dark mb-6">Engagement & Roadmaps</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                {siteContent.services.fractional.engagementModels?.map((model, idx) => (
-                  <div key={idx} className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-gold transition-colors">
-                    <h3 className="text-xl font-bold text-gray-dark mb-3">{model.name}</h3>
-                    <p className="text-charcoal">{model.description}</p>
-                  </div>
-                ))}
-              </div>
-              {siteContent.services.fractional.engagementAddOns && (
-                <div className="bg-white rounded-lg p-6 mb-12 border-l-4 border-charcoal shadow-sm">
-                  <p className="text-charcoal font-semibold">
-                    {siteContent.services.fractional.engagementAddOns}
+                <div className="prose prose-lg max-w-none text-charcoal mb-8">
+                  <p className="text-xl leading-relaxed whitespace-pre-wrap italic text-gray-600 mb-8 border-l-4 border-gold pl-6">
+                    {siteContent.about.narrative}
+                  </p>
+                  <p className="text-lg leading-relaxed whitespace-pre-wrap">
+                    {siteContent.principal.bio}
                   </p>
                 </div>
-              )}
-            </div>
-          </div>
-        </section>
-
-        <LogoCloud />
-
-        <ChallengeInput />
-
-        <section className="section-padding bg-gray-50">
-          <div className="container-custom">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-gray-dark mb-6">Connect</h2>
-              <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a
-                  href={siteContent.principal.linkedIn}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-charcoal hover:text-gold transition-colors font-semibold"
-                >
-                  {/* SVG Icon */}
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                  </svg>
-                  <span>Clay White on LinkedIn</span>
-                </a>
-                <span className="text-charcoal hidden sm:inline">•</span>
-                <a
-                  href={siteContent.company.linkedIn}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-charcoal hover:text-gold transition-colors font-semibold"
-                >
-                  {/* SVG Icon */}
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                  </svg>
-                  <span>WH Advisory Services on LinkedIn</span>
-                </a>
               </div>
             </div>
           </div>
         </section>
 
-        <CTA
-          primaryText="Schedule a Strategy Audit"
-          primaryHref="/contact"
-        />
+        {/* Narrative Hierarchy */}
+        <section className="section-padding bg-gray-dark text-white">
+          <div className="container-custom max-w-6xl mx-auto space-y-8">
+
+            {/* The Vision — full-width manifesto */}
+            <div className="border-l-4 border-gold pl-8 py-4">
+              <p className="text-2xl md:text-3xl font-light text-white leading-snug tracking-tight">
+                {siteContent.principal.additionalBio[0]}
+              </p>
+            </div>
+
+            {/* The Model & The Expert — balanced 2-column */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+              {/* The Model */}
+              <div className="group bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-gold/40 transition-all duration-300 hover:-translate-y-1 flex flex-col gap-6">
+                <div className="flex items-start gap-4">
+                  <div className="shrink-0 w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <p className="text-sm font-semibold uppercase tracking-widest text-gold">The Model</p>
+                </div>
+                <p className="text-lg text-gray-200 leading-relaxed group-hover:text-white transition-colors">
+                  {siteContent.principal.additionalBio[1]}
+                </p>
+              </div>
+
+              {/* The Expert */}
+              <div className="group bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-gold/40 transition-all duration-300 hover:-translate-y-1 flex flex-col gap-6">
+                <div className="flex items-start gap-4">
+                  <div className="shrink-0 w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
+                  </div>
+                  <p className="text-sm font-semibold uppercase tracking-widest text-gold">The Experience</p>
+                </div>
+                <p className="text-lg text-gray-200 leading-relaxed group-hover:text-white transition-colors">
+                  {siteContent.principal.additionalBio[2]}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why WH Advisory — closing bio section */}
+        <section className="section-padding bg-white">
+          <div className="container-custom max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-dark mb-6">
+                  Built for Execution,<br /> Not Observation.
+                </h2>
+                <div className="w-16 h-1 bg-gold mb-8"></div>
+                <p className="text-lg text-charcoal leading-relaxed mb-6">
+                  {siteContent.about.fractionalDeepDive.execution.description.split('\n\n')[0]}
+                </p>
+                <p className="text-lg text-charcoal leading-relaxed">
+                  {siteContent.about.fractionalDeepDive.execution.description.split('\n\n')[2]}
+                </p>
+              </div>
+              <div className="bg-gray-50 rounded-2xl p-10 border border-gray-100 space-y-6">
+                {siteContent.about.fractionalDeepDive.deliverables.items.map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-4">
+                    <span className="text-gold text-xl mt-0.5">✓</span>
+                    <div>
+                      <p className="font-bold text-gray-dark">{item.name}</p>
+                      <p className="text-sm text-charcoal">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA — link to Fractional Leadership page */}
+        <section className="section-padding bg-charcoal text-white text-center">
+          <div className="container-custom max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Interested in Working Together?</h2>
+            <p className="text-xl text-gray-300 mb-10">
+              Explore how fractional executive leadership can accelerate your business — without the full-time cost.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/services/fractional-leadership" className="bg-gold text-charcoal px-10 py-4 rounded-lg font-bold hover:bg-white transition-all shadow-lg">
+                Explore Fractional Leadership
+              </Link>
+              <Link href="/contact" className="border-2 border-white text-white px-10 py-4 rounded-lg font-bold hover:bg-white hover:text-charcoal transition-all">
+                Schedule a Consultation
+              </Link>
+            </div>
+          </div>
+        </section>
+
       </div>
     </>
   );
 }
+

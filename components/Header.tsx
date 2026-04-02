@@ -14,6 +14,7 @@ export default function Header() {
 
   const navLinks = [
     { name: "Home", href: "/" },
+    { name: "Fractional Leadership", href: "/services/fractional-leadership" },
     { name: "GRC & Regulatory", href: "/services/grc-regulatory" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },

@@ -6,25 +6,36 @@ import ChallengeInput from "@/components/ChallengeInput";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "GRC & Regulatory Strategy | SOC 2, HIPAA, SOX, NIST Compliance",
-  description: "GRC framework implementation and audit readiness. Expert SOC 2, NIST, HIPAA, SOX, and SEC compliance consulting for investor-ready growth. Serving Dallas, TX and Orange County, CA.",
+  title: "GRC & Regulatory Strategy | SOC 2, HIPAA, SOX, NIST, ISO 27001 | WH Advisory",
+  description: "Transform compliance from a cost center to a strategic asset. WH Advisory delivers SOC 2, NIST, ISO 27001, HIPAA, GAPP, SOX, and SEC cybersecurity compliance consulting — with audit readiness and investor-ready governance frameworks. Serving Dallas, TX and Orange County, CA.",
   keywords: [
-    "grc advisory",
-    "soc 2 compliance",
-    "hipaa compliance",
-    "sox compliance",
-    "nist compliance",
-    "sec compliance",
+    "GRC advisory",
+    "SOC 2 compliance",
+    "SOC 2 Type II readiness",
+    "HIPAA compliance",
+    "SOX compliance",
+    "NIST compliance",
+    "ISO 27001",
+    "SEC cybersecurity compliance",
+    "GAPP compliance",
+    "CCPA compliance",
+    "enterprise risk management",
+    "third party risk management",
+    "vendor risk management",
     "audit readiness",
-    "compliance consultant",
-    "grc framework",
-    "dallas grc consultant",
-    "orange county compliance",
+    "compliance framework implementation",
+    "information security governance",
+    "data privacy compliance",
+    "regulatory compliance consulting",
+    "GRC consultant Dallas TX",
+    "GRC consultant Orange County CA",
+    "investor ready compliance",
+    "cybersecurity governance",
   ],
   openGraph: {
-    title: "GRC & Regulatory Strategy | WH Advisory Services",
-    description: "Framework implementation and audit readiness. SOC 2, NIST, HIPAA, SOX, SEC compliance expertise for investor-ready growth.",
-    type: "website",
+    title: "GRC & Regulatory Strategy | SOC 2, HIPAA, SOX, NIST | WH Advisory Services",
+    description: "From compliance burden to strategic asset. SOC 2, NIST, ISO 27001, HIPAA, GAPP, SOX, and SEC compliance expertise for audit-ready, investor-ready growth.",
+    type: "article",
   },
 };
 
@@ -71,12 +82,12 @@ export default function GRCRegulatoryPage() {
               <h2 className="text-3xl font-bold text-gray-dark mb-8">Frameworks & Standards</h2>
               <FrameworkList />
 
-              {siteContent.services.grc.coreServices && (
+              {siteContent.services.coreServices && (
                 <div className="mt-12">
                   <h2 className="text-3xl font-bold text-gray-dark mb-8">Core Services</h2>
                   <div className="space-y-6">
-                    {siteContent.services.grc.coreServices.map((service, idx) => (
-                      <div key={idx} className="bg-gray-50 rounded-lg p-6 border-l-4 border-gold">
+                    {siteContent.services.coreServices.map((service: { name: string; description: string }, idx: number) => (
+                      <div key={idx} className="bg-white rounded-lg p-6 border-l-4 border-gold shadow-sm">
                         <h3 className="text-xl font-bold text-gray-dark mb-2">{service.name}</h3>
                         <p className="text-charcoal">{service.description}</p>
                       </div>
@@ -88,7 +99,7 @@ export default function GRCRegulatoryPage() {
               <div className="mt-12 bg-gray-50 rounded-lg p-8">
                 <h3 className="text-2xl font-bold text-gray-dark mb-4">Sector-Specific Expertise</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                  {siteContent.sectors.map((sector, idx) => (
+                  {siteContent.sectors.list.map((sector: { name: string; description: string }, idx: number) => (
                     <div key={idx} className="bg-white rounded p-4">
                       <h4 className="font-bold text-gray-dark mb-2">{sector.name}</h4>
                       <p className="text-sm text-charcoal">{sector.description}</p>

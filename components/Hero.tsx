@@ -26,13 +26,7 @@ export default function Hero() {
             >
               {siteContent.hero.primaryCTA}
             </Link>
-            <Link
-              href="/services/grc-regulatory"
-              onClick={() => handleCTAClick(siteContent.hero.secondaryCTA, "/services/grc-regulatory")}
-              className="border-2 border-charcoal text-charcoal px-8 py-3 rounded-lg font-bold hover:bg-charcoal hover:text-white transition-colors"
-            >
-              {siteContent.hero.secondaryCTA}
-            </Link>
+
           </div>
         </div>
       </div>

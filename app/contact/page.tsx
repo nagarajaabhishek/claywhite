@@ -4,19 +4,24 @@ import { siteContent } from "@/content/site";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact WH Advisory Services | Schedule a Strategy Audit",
-  description: "Schedule a strategy audit or discuss your compliance and GRC needs. Serving Dallas, TX and Orange County, CA. Get expert fractional COO/CRO and GRC advisory services.",
+  title: "Contact WH Advisory Services | Schedule a Fractional Executive Consultation",
+  description: "Ready to bring structure, reduce risk, and scale faster? Contact WH Advisory Services to schedule a strategy audit. Fractional COO, CFO, and GRC advisory expertise. Serving Dallas, TX and Orange County, CA.",
   keywords: [
-    "contact wh advisory",
+    "contact WH Advisory Services",
     "schedule strategy audit",
-    "grc consultation",
+    "fractional executive consultation",
+    "GRC advisory consultation",
     "compliance consultation",
-    "dallas compliance consultant",
-    "orange county grc",
+    "fractional COO inquiry",
+    "fractional CFO inquiry",
+    "compliance consultant Dallas TX",
+    "GRC consultant Orange County CA",
+    "WH Advisory contact",
+    "Clay White contact",
   ],
   openGraph: {
     title: "Contact WH Advisory Services | Schedule a Strategy Audit",
-    description: "Get in touch with WH Advisory Services. Schedule a strategy audit or discuss your compliance and GRC needs.",
+    description: "Get in touch with WH Advisory Services. Schedule a strategy audit for fractional COO, CFO, or GRC executive leadership.",
     type: "website",
   },
 };

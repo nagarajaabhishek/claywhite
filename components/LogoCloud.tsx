@@ -8,7 +8,7 @@ export default function LogoCloud() {
           Prior Companies & Experience
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {siteContent.companies.map((company, idx) => (
+          {siteContent.companies.map((company: { name: string; role: string }, idx: number) => (
             <div key={idx} className="text-center">
               <div className="bg-white rounded-lg p-6 shadow-sm h-full flex flex-col justify-center items-center">
                 <h3 className="text-lg font-bold text-gray-dark mb-2">{company.name}</h3>

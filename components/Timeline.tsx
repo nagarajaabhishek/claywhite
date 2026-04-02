@@ -8,7 +8,7 @@ export default function Timeline() {
           Executive Career Highlights
         </h2>
         <div className="max-w-3xl mx-auto space-y-8">
-          {siteContent.companies.map((company, idx) => (
+          {siteContent.companies.map((company: { name: string; role: string; description: string }, idx: number) => (
             <div key={idx} className="flex gap-6">
               <div className="flex-shrink-0">
                 <div className="w-3 h-3 bg-gold rounded-full mt-2"></div>
