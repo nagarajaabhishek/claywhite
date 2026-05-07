@@ -25,14 +25,14 @@ export const siteContent = {
     trackRecord: "$4B",
     trackRecordLabel: "Public Entities Supported",
     frameworks: "5+",
-    frameworksLabel: "GRC Frameworks Mastered",
+    frameworksLabel: "GRC Frameworks",
   },
   services: {
     overviewDescription: "Executive-level Governance, Risk, and Compliance (GRC) and operational leadership—delivered through flexible, high-impact engagement models designed for speed, scalability, and measurable ROI.",
     fractional: {
       title: "Fractional Executive Leadership",
       headline: "C-Suite Impact Without Full-Time Overhead",
-      description: "WH Advisory Services provides fractional executive leadership across CFO, COO, and GRC roles—embedding experienced leadership directly into your business at critical inflection points.\n\nFull-time executives often cost $250K–$550K+ annually, with additional overhead from benefits, equity, and long hiring cycles. Our fractional model delivers comparable expertise for $60K–$240K annually, enabling faster decisions and immediate execution.",
+      description: "WH Advisory Services provides fractional executive leadership across the C-suite—embedding experienced leadership directly into your business at critical inflection points.\n\nFull-time executives often cost $250K–$550K+ annually, with additional overhead from benefits, equity, and long hiring cycles. Our fractional model delivers comparable expertise for $60K–$240K annually, enabling faster decisions and immediate execution.",
       whyChoose: [
         "40–75% cost savings compared to full-time executive hires",
         "Immediate deployment—no 6–12 month hiring delays",
@@ -73,12 +73,12 @@ export const siteContent = {
       headline: "From Compliance Burden to Strategic Advantage",
       description: "Regulatory complexity is increasing—multi-state privacy laws, cybersecurity requirements, and third-party risk are now board-level concerns. WH Advisory Services transforms compliance into a structured, scalable framework that supports growth and investor readiness.",
       coreCapabilities: [
-        "SOC 2 Type I & II Readiness",
-        "NIST & ISO Security Framework Implementation",
-        "HIPAA & Healthcare Compliance Strategy",
-        "Generally Accepted Privacy Principles (GAPP)",
-        "Enterprise Risk Management (ERM)",
-        "Third-Party & Supply Chain Risk Oversight"
+        "NIST Implementation",
+        "ISO 27001 Assessment",
+        "Risk Assessment",
+        "Third Party Risk Management (TPRM)",
+        "SOX & SEC Financial Controls",
+        "SOC 2 Type I & II Readiness"
       ],
       frameworks: [
         {
@@ -88,6 +88,10 @@ export const siteContent = {
         {
           name: "NIST & ISO Security Standards",
           description: "Information security framework implementation and certification support.",
+        },
+        {
+          name: "Risk Assessment",
+          description: "Enterprise-wide risk identification, scoring, and mitigation planning.",
         },
         {
           name: "HIPAA & Healthcare Regulatory Compliance",
@@ -109,7 +113,7 @@ export const siteContent = {
         "Integrated cybersecurity and data risk oversight"
       ]
     },
-    companyServicesIntro: "WH Advisory Services delivers integrated Governance, Risk, and Compliance (GRC) and executive leadership solutions designed to help companies scale, reduce risk, and operate with clarity at critical inflection points.",
+    companyServicesIntro: "WH Advisory Services delivers integrated governance, risk, compliance, and executive leadership solutions designed to help companies scale, reduce risk, and operate with clarity at critical inflection points.",
     coreServices: [
       {
         name: "Service 01: Governance & Board Readiness",

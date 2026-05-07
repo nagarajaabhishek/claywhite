@@ -48,22 +48,22 @@ export default function Footer() {
             <h4 className="font-bold mb-3">Services</h4>
             <ul className="space-y-1 text-sm text-gray-600">
               <li>
-                <Link href="/services/grc-regulatory" className="hover:text-gold transition-colors">
-                  GRC & Regulatory
+                <Link href="/services/company-services" className="hover:text-gold transition-colors">
+                  Company Services
                 </Link>
               </li>
               <li>
-                <Link href="/services/grc-regulatory" className="hover:text-gold transition-colors">
+                <Link href="/services/company-services" className="hover:text-gold transition-colors">
                   SOC 2 Readiness
                 </Link>
               </li>
               <li>
-                <Link href="/services/grc-regulatory" className="hover:text-gold transition-colors">
+                <Link href="/services/company-services" className="hover:text-gold transition-colors">
                   ISO 27001
                 </Link>
               </li>
               <li>
-                <Link href="/services/grc-regulatory" className="hover:text-gold transition-colors">
+                <Link href="/services/company-services" className="hover:text-gold transition-colors">
                   HIPAA Compliance
                 </Link>
               </li>
@@ -97,6 +97,11 @@ export default function Footer() {
               <li>
                 <Link href="/contact" className="hover:text-gold transition-colors">
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/news-events/articles" className="hover:text-gold transition-colors">
+                  News and Events
                 </Link>
               </li>
             </ul>

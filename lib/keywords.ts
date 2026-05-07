@@ -61,7 +61,7 @@ export const keywordClusters: KeywordCluster[] = [
       'soc 2 preparation',
     ],
     intent: 'commercial',
-    targetPage: '/services/grc-regulatory',
+    targetPage: '/services/company-services',
     localModifiers: ['dallas', 'orange county'],
   },
   {
@@ -73,7 +73,7 @@ export const keywordClusters: KeywordCluster[] = [
       'hipaa consultant',
     ],
     intent: 'commercial',
-    targetPage: '/services/grc-regulatory',
+    targetPage: '/services/company-services',
   },
   {
     primary: 'sox compliance',
@@ -84,7 +84,7 @@ export const keywordClusters: KeywordCluster[] = [
       'sec sox compliance',
     ],
     intent: 'commercial',
-    targetPage: '/services/grc-regulatory',
+    targetPage: '/services/company-services',
   },
   {
     primary: 'nist compliance',
@@ -95,7 +95,7 @@ export const keywordClusters: KeywordCluster[] = [
       'nist implementation',
     ],
     intent: 'commercial',
-    targetPage: '/services/grc-regulatory',
+    targetPage: '/services/company-services',
   },
   {
     primary: 'grc advisory',
@@ -107,7 +107,7 @@ export const keywordClusters: KeywordCluster[] = [
       'grc strategy',
     ],
     intent: 'commercial',
-    targetPage: '/services/grc-regulatory',
+    targetPage: '/services/company-services',
   },
 
   // Investor Readiness Cluster
@@ -130,7 +130,7 @@ export const keywordClusters: KeywordCluster[] = [
       'audit readiness consultant',
     ],
     intent: 'commercial',
-    targetPage: '/services/grc-regulatory',
+    targetPage: '/services/company-services',
   },
 
   // Sector-Specific Clusters
@@ -143,7 +143,7 @@ export const keywordClusters: KeywordCluster[] = [
       'fintech compliance consultant',
     ],
     intent: 'commercial',
-    targetPage: '/services/grc-regulatory',
+    targetPage: '/services/company-services',
   },
   {
     primary: 'healthcare tech compliance',
@@ -153,7 +153,7 @@ export const keywordClusters: KeywordCluster[] = [
       'healthcare tech grc',
     ],
     intent: 'commercial',
-    targetPage: '/services/grc-regulatory',
+    targetPage: '/services/company-services',
   },
 
   // Local Search Clusters
@@ -175,7 +175,7 @@ export const keywordClusters: KeywordCluster[] = [
       'oc compliance consultant',
     ],
     intent: 'commercial',
-    targetPage: '/services/grc-regulatory',
+    targetPage: '/services/company-services',
   },
 ];
 
